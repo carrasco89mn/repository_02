@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MoviePlayer</string>
+    <string name="hello_world">Hello world, CBCG!</string>
+    <string name="thumbnail_description">Thumbnail</string>
+    <string name="large_text"/>
+    <string name="small_text"/>
+
+</resources>
