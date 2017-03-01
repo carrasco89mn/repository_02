@@ -42,8 +42,8 @@ public class MainActivity extends Activity implements OnItemClickListener{
      String[] thumbnailColumns = { MediaStore.Video.Thumbnails.DATA };
      
      // Query external movie content for selected media columns
-     @SuppressWarnings("deprecation")
-	Cursor mediaCursor = managedQuery(
+     //managedQuery() was before getContentResolver().query()
+	 Cursor mediaCursor = getContentResolver().query(
      MediaStore.Video.Media.EXTERNAL_CONTENT_URI, mediaColumns,
      null, null, null);
      
@@ -56,8 +56,8 @@ public class MainActivity extends Activity implements OnItemClickListener{
      .getColumnIndex(MediaStore.Video.Media._ID));
      
      // Get the thumbnail associated with the video
-     @SuppressWarnings("deprecation")
-	 Cursor thumbnailCursor = managedQuery(
+     //managedQuery() was before getContentResolver().query()
+	 Cursor thumbnailCursor = getContentResolver().query(
      MediaStore.Video.Thumbnails.EXTERNAL_CONTENT_URI,
      thumbnailColumns, MediaStore.Video.Thumbnails.VIDEO_ID
      + "=" + id, null, null);
